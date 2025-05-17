@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="todotext">
+    <button class="save"> save</button>
+    <div class="todoOuter">
+    </div>
+
+
+    <script>  
+
+        let save = document.getElementsByClassName('save')[0]
+        let todoOuter = document.getElementsByClassName('todoOuter')[0]
+        let todotext = document.getElementById("todotext")
+
+        save.addEventListener('click', () => {
+            let todocrntValue = todotext.value
+
+            if (todocrntValue == '') {
+                alert("Please enter something")
+            } else {
+                let mostOuter = document.createElement("div")
+                let textip = document.createElement('h1')
+
+
+
+                let editBtn = document.createElement('button')
+                editBtn.innerText = "Edit"
+
+                let deleteBtn = document.createElement('button')
+                deleteBtn.innerText = "Delete"
+
+
+                textip.innerText = todocrntValue
+
+                mostOuter.appendChild(textip)
+
+
+                mostOuter.appendChild(editBtn)
+                mostOuter.appendChild(deleteBtn)
+
+
+
+                console.log(textip)
+                deleteBtn.addEventListener('click', deleteFns)
+
+                editBtn.addEventListener('click', edit)
+                todoOuter.appendChild(mostOuter)
+
+                function deleteFns() {
+                    mostOuter.remove()
+                }
+                function edit() {
+                    let newval = prompt("Enter Changed Todo")
+                    textip.innerText = newval
+                    console.log(newval)
+
+                }
+                todotext.value=''
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

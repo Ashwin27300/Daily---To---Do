@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(100deg, #001214, #001f29);
+    color: white;
+    transition: 0.3s linear;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    min-height: 100vh;
+}
+
+.container {
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 550px;
+    max-width: 90%;
+}
+
+h1 {
+    text-align: center;
+    gap: 10px;
+    font-size: 2.5rem;
+}
+
+.input-section {
+    display: flex;
+    border: 0px solid #6d6b6b;
+}
+
+input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px 0 0 20px;
+    background: #001f29c7;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+input:hover {
+    background: #001f29;
+    box-shadow: 0 0 10px #ffffff4e;
+}
+
+#taskList-container {
+    width: 100%;
+}
+
+.save {
+    width: 70px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #1d2835;
+    border: none;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    transition: 0.5s;
+}
+
+.save:hover {
+    box-shadow: 0 0 10px #ffffff70;
+}
+
+.TaskBox container {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.TaskBox button {
+    height: 40px;
+    width: 100px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #1d2835;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.TaskBox button:hover {
+    box-shadow: 0 0 10px #ffffff70;
+}
+
+.TaskBox h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    input {
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+
+    .save {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .TaskBox container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .TaskBox button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .TaskBox h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .save {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .TaskBox button {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .TaskBox h3 {
+        font-size: 16px;
+    }
+}
